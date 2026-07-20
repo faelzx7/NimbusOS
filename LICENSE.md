@@ -1,7 +1,6 @@
 # Licença de Uso — NimbusOS
 
-**Copyright © 2026 [SEU NOME COMPLETO OU RAZÃO SOCIAL].**
-Todos os direitos reservados.
+**Copyright © 2026 — NimbusOS. Todos os direitos reservados.**
 
 Este é um software proprietário. O acesso é concedido mediante aquisição paga e sob os termos
 abaixo. Ao clonar, copiar, instalar ou usar o NimbusOS, o Licenciado concorda com esta licença.
@@ -11,7 +10,8 @@ abaixo. Ao clonar, copiar, instalar ou usar o NimbusOS, o Licenciado concorda co
 - **Software / NimbusOS:** este sistema como um todo — os comandos e skills em `.claude/skills/`,
   os templates em `templates/`, a estrutura de pastas, os arquivos de configuração e toda a
   documentação inclusa.
-- **Licenciante:** [SEU NOME COMPLETO OU RAZÃO SOCIAL], titular dos direitos sobre o Software.
+- **Licenciante:** o titular dos direitos sobre o Software, identificado no comprovante de
+  aquisição fornecido ao Licenciado no ato da compra.
 - **Licenciado:** a pessoa física ou jurídica que adquiriu acesso ao Software.
 - **Conteúdo Gerado:** os materiais que o Licenciado produz usando o Software (carrosséis,
   textos, campanhas, relatórios, análises, etc.).
@@ -73,10 +73,11 @@ cópias do Software. A obrigação de não redistribuir subsiste à rescisão.
 
 ## 9. Lei aplicável e foro
 
-Esta licença é regida pelas leis da República Federativa do Brasil. Fica eleito o foro da comarca
-de [SUA CIDADE/UF] para dirimir eventuais controvérsias.
+Esta licença é regida pelas leis da República Federativa do Brasil. Fica eleito o foro do
+domicílio do Licenciante para dirimir eventuais controvérsias, conforme identificado no
+comprovante de aquisição.
 
 ---
 
-Para dúvidas sobre licenciamento, uso comercial ampliado ou parcerias, contate:
-[SEU E-MAIL OU CONTATO].
+Dúvidas sobre licenciamento, uso comercial ampliado ou parcerias devem ser encaminhadas pelo
+mesmo canal em que o acesso foi adquirido.
