@@ -58,3 +58,8 @@ e de terceiros) que complementam as do NimbusOS — os dois últimos são consul
 
 Cada skill vive em `.claude/skills/<nome>/SKILL.md` — pra ajustar o comportamento de qualquer
 uma, é só editar o arquivo direto.
+
+## Licença
+
+Software proprietário. O acesso é individual e não pode ser revendido nem redistribuído — veja
+`LICENSE.md`.
