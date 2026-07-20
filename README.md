@@ -21,8 +21,8 @@ real do projeto · `/novo-projeto` isola um cliente ou iniciativa em pasta próp
 `/carrossel` gera carrossel/post visual (HTML → PNG via Playwright) com a identidade da marca ·
 `/publicar-tema` entrega blog + carrossel + legendas amarrados a partir de um tema · `/seo` roda
 pesquisa de demanda, concorrência, GMB, on-page, estratégia de conteúdo, monitoramento e GEO ·
-`/responder-avaliacoes` escreve respostas humanas pra reviews · `/aprovar-post` publica
-blog + Instagram + Facebook num só comando.
+`/responder-avaliacoes` escreve respostas humanas pra reviews · `/aprovar-post` publica o blog e
+deixa o carrossel e as legendas prontos pra postar (postagem automática nas redes é opcional).
 
 **Anúncios pagos**
 `/anuncio-google` monta campanha completa em CSVs pra importar no Google Ads Editor ·
