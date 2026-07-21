@@ -53,6 +53,15 @@ uso, não só HTML/CSS que "funciona".
 - Evitar preto puro (`#000`) e branco puro (`#FFF`) em fundos grandes — prefira tons próximos
   (ex: `#0F0F0F`/`#1A1A1A` pro escuro, `#FAFAFA`/`#F5F5F5` pro claro). Reduz fadiga visual e
   parece mais trabalhado.
+- **Dar ritmo às dobras — nunca a página inteira num tom só.** Numa página com várias seções
+  (landing, página de produto), alternar o fundo entre as dobras: uma clara/branca, a próxima
+  escura, outra num tom de acento, e assim por diante. Fundo monocromático do topo ao rodapé
+  achata a página e cansa. A cada seção, escolher deliberadamente uma cor de fundo da paleta que
+  contraste com a vizinha — sem cair no aleatório: 2 a 4 "famílias" de fundo que se revezam num
+  ritmo claro (ex: escuro → claro → escuro → acento → claro).
+- Ao trocar o fundo de uma dobra, **trocar junto a paleta inteira daquela dobra** — texto, cards,
+  bordas, cor de acento — pra manter o contraste AA em cada uma. O jeito robusto é tokens por
+  seção (variáveis CSS `--sec-*` que cada dobra sobrescreve), não recolorir elemento a elemento.
 
 ### Tipografia
 
@@ -88,6 +97,8 @@ uso, não só HTML/CSS que "funciona".
 
 - Responsivo por padrão, não como etapa separada depois.
 - Nunca usar preto/branco puro em áreas grandes de fundo.
+- Numa página de várias seções, nunca deixar tudo num fundo só — alternar as dobras (clara,
+  escura, acento) num ritmo deliberado, trocando a paleta inteira de cada dobra junto com o fundo.
 - Nunca mais de 2 famílias de fonte no mesmo projeto.
 - Todo espaçamento vem da escala de 4px — sem valores soltos.
 - Se `identidade/identidade.md` estiver preenchida, ela manda mais que qualquer padrão genérico
