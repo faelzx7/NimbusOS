@@ -17,6 +17,8 @@ uso, não só HTML/CSS que "funciona".
 
 - **Identidade (se o negócio já tiver uma):** `identidade/identidade.md` — cores, tipografia e
   personalidade visual definidas ali sobrescrevem os padrões genéricos abaixo.
+- **Fontes enviadas pelo usuário (se houver):** `identidade/fontes/` — arquivos reais (`.woff2`
+  de preferência) referenciados no campo "Arquivos" da Tipografia em `identidade/identidade.md`.
 - **Voz (pra copy dentro da interface):** `_memoria/preferencias.md`.
 
 ## Quando usar
@@ -29,6 +31,30 @@ uso, não só HTML/CSS que "funciona".
 ---
 
 ## Princípios
+
+### Fugir do genérico de IA
+
+O maior risco não é ficar feio — é ficar com **cara de site gerado por IA**, o "vibecoding
+genérico" que qualquer usuário reconhece de cara e que mina a credibilidade da peça inteira. Isso
+tem padrões conhecidos e repetidos. Evitar, salvo pedido explícito do usuário:
+
+- Bege/creme quente (`#F4F1EA`) com serifada display e acento terracota.
+- Quase-preto com um único pop de verde-ácido ou vermelho vibrante.
+- Colunas densas com regrinhas finas estilo jornal.
+- Hero com gradiente roxo-pro-azul sobre fundo branco.
+- Inter ou Space Grotesk como fonte "segura" — são a escolha padrão de qualquer gerador de IA,
+  o que as torna o oposto de neutras: viraram a assinatura visual do genérico.
+- Emoji como marcador de seção.
+- Tudo centralizado.
+- `rounded-lg` em todo elemento, sem exceção.
+- Cartão com barra/friso de acento na lateral, em toda parte.
+
+**Como fugir de verdade:** ancorar cada escolha no assunto específico da peça — se
+`identidade/identidade.md` já define paleta e tipografia, usar dali sem desviar. Se não define
+nada, não cair automaticamente nos padrões acima só porque "funcionam sempre" — fazer uma escolha
+deliberada e específica pro que está sendo construído, mesmo que mais simples. Um layout bem
+composto com uma escolha de tipografia com personalidade vale mais que um "estilo" genérico
+aplicado por cima.
 
 ### Hierarquia visual
 
@@ -66,9 +92,40 @@ uso, não só HTML/CSS que "funciona".
 ### Tipografia
 
 - No máximo 2 famílias de fonte por projeto (uma pra título, uma pro corpo — ou a mesma família
-  em pesos diferentes).
+  em pesos diferentes). Pareamento deliberado: uma face de título com personalidade, usada com
+  moderação, complementada por uma face de corpo mais neutra — não a mesma dupla seguidona em
+  todo projeto. Evitar Inter/Space Grotesk como default (ver "Fugir do genérico de IA").
+- **De onde vem a fonte, em ordem de prioridade:**
+  1. `identidade/identidade.md` já define título/corpo → usar exatamente isso.
+  2. O usuário disse "vou mandar minhas fontes" → arquivos ficam em `identidade/fontes/`,
+     referenciados no campo "Arquivos" da Tipografia. Se ele ainda não mandou mas sinalizou que
+     vai, perguntar o formato (`.woff2` é o ideal) e esperar antes de fechar o visual.
+  3. Nada definido → escolher um pareamento com personalidade pro assunto específico da peça
+     (não Inter/Space Grotesk por padrão) e avisar que é um padrão neutro, sugerindo que o
+     usuário rode `/instalar` ou edite `identidade/identidade.md` se quiser fixar isso pra marca.
+- **Como carregar de verdade** (isso não é um Artifact — é um site real, então CDN de fonte
+  funciona normalmente, mas self-host é preferível):
+  - Arquivo próprio em `identidade/fontes/`: declarar via `@font-face` com `.woff2`, sem
+    dependência externa.
+  - Sem arquivo próprio: `<link>`/`@import` do Google Fonts pelo nome definido. Nunca deixar a
+    peça cair silenciosamente na fonte de sistema do navegador só porque o link falhou — testar
+    que carregou.
 - Entrelinha (line-height): ~1.5 pro corpo de texto, ~1.2 pra títulos grandes.
 - Letter-spacing levemente negativo em títulos grandes costuma ler como mais refinado.
+
+### Responsividade
+
+- Mobile-first: escrever o CSS base pro menor viewport, depois adicionar `min-width` pra telas
+  maiores — não o inverso.
+- Breakpoints de referência (ajustar ao conteúdo, não decorar como regra fixa): `480px` (celular
+  grande), `768px` (tablet), `1024px`/`1280px` (desktop).
+- Tipografia fluida com `clamp()` pra títulos grandes (ex: `clamp(1.9rem, 4.4vw, 3rem)`) evita
+  saltos bruscos de tamanho entre breakpoints.
+- Alvo de toque mínimo de 44×44px em qualquer elemento clicável em mobile.
+- Tabela, bloco de código e conteúdo largo ganham `overflow-x: auto` no próprio container — a
+  página nunca rola na horizontal.
+- Testar mentalmente (ou de fato, se houver como rodar) em pelo menos 3 larguras: ~375px, ~768px,
+  ~1440px — não só redimensionar a janela do editor e assumir que "coube".
 
 ---
 
@@ -83,14 +140,17 @@ uso, não só HTML/CSS que "funciona".
 ## Workflow
 
 1. Confirmar se há identidade visual definida (`identidade/identidade.md`). Se houver, usar as
-   cores/tipografia de lá. Se não, usar os padrões da seção "Princípios" acima e avisar que está
-   usando um padrão neutro.
+   cores/tipografia de lá — inclusive checar `identidade/fontes/` por arquivos reais. Se não,
+   escolher deliberadamente (ver "Fugir do genérico de IA") e avisar que está usando um padrão
+   neutro.
 2. Entender o objetivo da tela/componente antes de codar — qual é a ação principal que ela
    precisa gerar.
-3. Construir componentizado e reutilizável, mobile-first.
+3. Construir componentizado e reutilizável, mobile-first, testando pelo menos 3 larguras.
 4. Cobrir os estados relevantes: padrão, hover, ativo, desabilitado, carregando, erro — não só
    o estado "feliz".
-5. Comentar apenas decisões de design não óbvias (por que esse espaçamento, por que essa cor) —
+5. Antes de considerar pronto, revisar contra a lista de "Fugir do genérico de IA" — se a peça
+   bateu com 2 ou mais itens da lista, refazer aquela parte antes de entregar.
+6. Comentar apenas decisões de design não óbvias (por que esse espaçamento, por que essa cor) —
    não narrar o que o código já mostra.
 
 ## Regras
@@ -100,6 +160,10 @@ uso, não só HTML/CSS que "funciona".
 - Numa página de várias seções, nunca deixar tudo num fundo só — alternar as dobras (clara,
   escura, acento) num ritmo deliberado, trocando a paleta inteira de cada dobra junto com o fundo.
 - Nunca mais de 2 famílias de fonte no mesmo projeto.
+- Nunca usar Inter ou Space Grotesk como escolha padrão quando nada foi definido — são a
+  assinatura visual do genérico de IA, o oposto de neutras.
+- Se o usuário disser que vai mandar fontes próprias, esperar os arquivos antes de fechar o
+  visual — não seguir com Google Fonts e trocar depois.
 - Todo espaçamento vem da escala de 4px — sem valores soltos.
 - Se `identidade/identidade.md` estiver preenchida, ela manda mais que qualquer padrão genérico
   desta skill.

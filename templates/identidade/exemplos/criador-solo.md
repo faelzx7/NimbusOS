@@ -19,6 +19,8 @@
 - **Corpo de texto:** Karla, peso 400-500
 - **Peso predominante:** títulos leves e itálicos — a suavidade é parte do estilo, não peso
   pesado
+- **Arquivos:** `identidade/fontes/fraunces-italic.woff2`, `identidade/fontes/karla.woff2`
+  (enviados pelo criador)
 
 ## Personalidade visual
 

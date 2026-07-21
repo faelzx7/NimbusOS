@@ -57,7 +57,9 @@ o que veio e seguir (não travar a instalação numa pergunta só).
 8. "Qual tarefa você repete toda semana e adoraria não precisar mais pensar nela?"
 
 **Identidade visual:**
-9. "Tem cores e fonte definidas? Se tiver, me passa."
+9. "Tem cores e fonte definidas? Se tiver, me passa. Se tiver os arquivos da fonte (não só o
+   nome), salva em `identidade/fontes/` e confirma aqui — sem arquivo, eu carrego a fonte via
+   Google Fonts pelo nome."
 10. "Tem arquivo de logo? Se tiver, salva em `identidade/logo.png` (ou `.svg`) e confirma aqui."
 
 ## Passo 3 — Preencher os arquivos
@@ -69,7 +71,8 @@ o que veio e seguir (não travar a instalação numa pergunta só).
 - **`_memoria/estrategia.md`** — "Gargalo principal" da resposta 7; a resposta 8 vira candidata
   a virar skill via `/mapear-rotinas` (anotar isso explicitamente no arquivo); "Prioridade das
   próximas semanas" derivada do gargalo.
-- **`identidade/identidade.md`** — preencher com respostas 9-10. Se não houver nada definido,
+- **`identidade/identidade.md`** — preencher com respostas 9-10, incluindo o campo "Arquivos" da
+  Tipografia se o usuário mandou arquivos de fonte. Se não houver nada definido,
   deixar em branco e avisar que as skills visuais usam um padrão neutro até isso ser preenchido.
   Se o usuário quiser um ponto de partida, apontar pra `templates/identidade/exemplos/` (exemplos
   ilustrativos, não pra copiar os valores, só o nível de detalhe esperado).

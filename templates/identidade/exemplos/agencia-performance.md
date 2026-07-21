@@ -14,9 +14,10 @@
 
 ## Tipografia
 
-- **Títulos:** Space Grotesk, peso 700
-- **Corpo de texto:** Inter, peso 400-500
-- **Peso predominante:** títulos bem pesados, corpo leve — contraste é proposital
+- **Títulos:** Archivo Expanded, peso 700
+- **Corpo de texto:** IBM Plex Sans, peso 400-500
+- **Peso predominante:** títulos bem pesados e largos, corpo leve — contraste é proposital
+- **Arquivos:** nenhum enviado — carregar via Google Fonts até o cliente mandar arquivo próprio
 
 ## Personalidade visual
 

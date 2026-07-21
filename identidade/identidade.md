@@ -18,6 +18,9 @@
 - **Títulos:**
 - **Corpo de texto:**
 - **Peso predominante:** (ex: negrito pesado nos títulos, regular no corpo)
+- **Arquivos:** (se você enviou os arquivos da fonte, salvos em `identidade/fontes/` — ex:
+  `identidade/fontes/titulo.woff2`. Se não tiver, as skills visuais carregam via Google Fonts ou
+  usam um padrão neutro.)
 
 ## Personalidade visual
 
