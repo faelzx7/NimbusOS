@@ -45,6 +45,70 @@ especificidade.
 
 ---
 
+## Landing page e carta de venda — os 4 pilares
+
+Toda página ou carta de venda eficaz se sustenta em 4 pilares, nessa ordem:
+
+1. **PROMETER** — capturar atenção com uma promessa clara, desejável e crível. O leitor precisa
+   pensar "isso é pra mim" nos primeiros segundos.
+2. **CUTUCAR** — explorar dor, frustração e desejo. Fazer o leitor sentir o problema e visualizar
+   a transformação.
+3. **PROVAR** — demonstrar que a promessa é real: depoimento, prova social, lógica, dado,
+   comparação, demonstração.
+4. **OFERTAR** — produto, entregáveis, bônus, preço, garantia e CTA de forma irresistível.
+
+Os 4 pilares aparecem sempre; a extensão e a quantidade de blocos variam com o produto e o
+público — nem toda página precisa ser longa. Julgar o tamanho certo pro projeto, não empilhar
+bloco por empilhar.
+
+### Blocos disponíveis (usar os que o projeto pedir, não todos de uma vez)
+
+- **Headline + sub-headline** — elemento mais importante; se não prender, nada mais é lido.
+  Conter pelo menos 2 de 4: grande benefício, notícia/novidade, curiosidade, rápido e fácil.
+  Máximo 17 palavras. Nunca ponto final — reticências ou nada. Fórmulas que funcionam: "Como X +
+  em Y tempo + sem Z dificuldade", "Se você X, então Y", ou uma headline já validada nesse nicho,
+  remodelada pro produto. Sub-headline reforça a promessa.
+- **Identificação e promessa** — mostrar que o leitor não está sozinho no problema, que outros na
+  mesma situação já resolveram com esse método. Conexão emocional antes de vender.
+- **Problema e solução** — explorar a dor a ponto do leitor se reconhecer, apresentar a solução
+  conectada ao produto, repetir a promessa sob ângulos diferentes ao longo da página.
+- **Provas** — depoimento e prova social (específico, diverso, verificável), prova demonstrativa
+  (o método funcionando na prática), argumento lógico, comparação antes/depois, dado ou pesquisa.
+  Distribuir ao longo da página, não isolar num bloco só.
+- **Bullets** — tópicos curtos que cutucam dor, reforçam desejo, listam benefício. Cada um com
+  impacto próprio — dá pra entender o valor só lendo os bullets.
+- **Exclusividade** — fazer o leitor sentir que a solução foi feita sob medida (útil quando a
+  página vem de um quiz ou segmentação prévia).
+- **Como funciona (passo a passo)** — o caminho depois da compra, com benefício em cada etapa.
+  Gera previsibilidade, reduz a sensação de risco.
+- **Entregáveis e bônus** — tudo que o cliente recebe, com o benefício de cada item. Bônus com
+  nome atrativo + descrição curta focada no benefício, não na lista de recursos.
+- **Vantagens (resumo)** — bullets diretos pra quem só escaneia a página.
+- **Oferta e preço** — ancoragem (de X por Y), economia clara, CTA forte e direto.
+- **Garantia** — mais de 7 dias gera mais confiança e menos reembolso. Antecipa e desarma "e se
+  não funcionar pra mim" com tom confiante, não defensivo.
+- **FAQ** — perguntas em primeira pessoa (como o leitor perguntaria), respostas curtas, usadas pra
+  quebrar as últimas objeções — não só perguntas genéricas de suporte.
+- **CTAs distribuídos** — vários ao longo da página, não só no fim. Texto reflete o desejo do
+  leitor, não o ato de comprar ("Quero os 3 exercícios", não "Comprar agora").
+
+### Regras de criação
+
+1. Linguagem do público do diagnóstico (seção acima) — escrever como o leitor fala e pensa, não
+   como o negócio fala internamente.
+2. Cada bloco flui pro próximo — a página é um tobogã que puxa até o CTA, não uma lista de seções
+   independentes.
+3. Usar as objeções e crenças identificadas no diagnóstico pra desarmar resistência ao longo de
+   toda a página, não só no FAQ.
+4. Alternar dor e desejo pra manter a tensão emocional — não empilhar só dor ou só benefício.
+5. Nada de linguagem genérica de template — cada frase específica pro produto e pro público real.
+6. Promessa forte, mas crível — exagero que quebra confiança custa mais caro que promessa menor
+   e sustentável.
+7. Se a página vem depois de um quiz ou formulário, conectar a abertura ao resultado ("Pelas suas
+   respostas, ficou claro que...").
+
+---
+
 ## Workflow
 
 ### Passo 1 — Entender o pedido
@@ -73,9 +137,10 @@ Seguir `_memoria/preferencias.md` à risca — sem jargão de guru se o tom do n
   mecanismo) — nunca só uma.
 - **E-mail/carta de venda:** gancho nas primeiras duas linhas, corpo constrói o caso (problema →
   mecanismo → prova → oferta), um único CTA no fechamento — não empilhar chamadas concorrentes.
-- **Landing page:** texto por bloco (herói, dor/promessa, como funciona, prova social, oferta,
-  perguntas frequentes, chamada final) — HTML só se pedido, e nesse caso seguindo
-  `identidade/identidade.md`.
+- **Landing page e carta de venda:** seguir a estrutura de 4 pilares (seção acima) — PROMETER,
+  CUTUCAR, PROVAR, OFERTAR, montados com os blocos que o projeto pedir. HTML só se pedido, e
+  nesse caso seguindo `identidade/identidade.md` (delegar o visual pra `/frontend-design` se a
+  peça for grande).
 - **Tagline:** 3-8 palavras, testável em voz alta, 5-8 opções.
 
 ### Passo 4 — Checkpoint
