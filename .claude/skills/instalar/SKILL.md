@@ -12,7 +12,7 @@ description: >
 
 Isso é uma conversa, não um formulário. Uma pergunta de cada vez, esperando resposta real antes
 de seguir. O objetivo: o sistema sair daqui sabendo quem é o negócio, como ele fala, e o que fazer
-primeiro.
+primeiro. 5-7 minutos, não mais que isso.
 
 ## Antes de começar
 
@@ -20,90 +20,122 @@ Ler `_memoria/empresa.md`. Se já tiver conteúdo real (não é o template em br
 
 > "Já existe uma configuração aqui. Quer refazer do zero ou só completar o que falta?"
 
-Se for instalação limpa, seguir direto.
+Checar também o nome da pasta atual. Se for genérico — `NimbusOS`, `nimbusos`, `template`,
+`meu-negocio`, `negocio`, `teste`, `test`, ou variação óbvia dessas, case-insensitive — guardar
+isso pra usar na Fase 5. Se já tem nome próprio, seguir sem mencionar.
 
-## Passo 1 — Tipo de negócio
+## Fase 1 — Escolha do perfil
 
-Perguntar qual descrição mais se encaixa:
+Perguntar qual perfil mais combina com o negócio:
 
-1. Sou eu sozinho (marca pessoal, criador, consultor solo)
-2. Atendo clientes por projeto (freelancer)
-3. Tenho uma equipe pequena entregando pra vários clientes (agência)
-4. Empresa com áreas definidas (marketing, comercial, operação, etc.)
+1. **Solopreneur / criador solo** — uma pessoa só, mistura de marca pessoal e negócio
+2. **Freelancer** — atende clientes, organiza por projeto/cliente
+3. **Agência / consultoria** — equipe pequena entregando pra vários clientes
+4. **Empresa** — empresa estabelecida com setores (marketing, comercial, financeiro, etc.)
 
-Isso define qual molde usar no Passo 4: `templates/perfis/solopreneur.md`,
-`freelancer.md`, `agencia.md` ou `empresa.md`. Se a resposta for "agência" ou "freelancer com
-clientes", `clientes/<nome>/` é onde cada cliente vive isolado — mencionar isso já aqui.
+A resposta determina qual molde usar na Fase 3: `templates/perfis/solopreneur.md`,
+`freelancer.md`, `agencia.md` ou `empresa.md`. Se for "freelancer" ou "agência/consultoria",
+`clientes/<nome>/` é onde cada cliente vive isolado — mencionar isso já aqui.
 
-## Passo 2 — Entrevista
+## Fase 2 — Entrevista
 
-Uma pergunta por vez. Se a resposta vier vaga, pedir concretude uma vez; na segunda vez, registrar
-o que veio e seguir (não travar a instalação numa pergunta só).
+Fazer essas perguntas em ordem, esperando a resposta de cada uma antes de seguir. Se vier resposta
+vaga, repetir uma vez pedindo concretude — não insistir mais que isso, registrar o que vier.
 
-**Negócio:**
-1. "Qual o nome? (do negócio, ou seu nome se for marca pessoal)"
-2. "Em uma frase, o que vocês entregam — do jeito que você explicaria pra alguém de fora do ramo?"
-3. "Quem realmente paga por isso? Descreve o cliente real, não uma persona genérica."
-4. "Time de quantas pessoas, e quem faz o quê?"
+**Sobre o negócio:**
+1. "Como você chama o que você faz? (nome do negócio, ou seu nome se for marca pessoal)"
+2. "O que você entrega, em uma frase do jeito que você falaria pro vizinho?"
+3. "Quem te paga? (perfil de cliente real — descreve em uma ou duas frases, sem persona genérica)"
+4. "Você toca sozinho ou tem equipe? Se tem, quantos e cada um fazendo o quê?"
 
-**Voz:**
-5. "Cola aqui um texto real seu — uma legenda, um email pra cliente, uma mensagem — recente e
-   que soe como vocês. Isso calibra a escrita melhor que qualquer lista de adjetivos."
-6. "Tem alguma palavra, expressão ou jeito de escrever que te incomoda quando você vê em outro
-   lugar? (isso vira lista do que evitar)"
+**Sobre voz:**
+5. "Me cola um exemplo da tua escrita — uma legenda do Insta, um email pra cliente, qualquer
+   coisa real e recente. Assim eu calibro o jeito de escrever sem precisar adivinhar."
+6. "O que te dá ranço quando alguém escreve assim? (ex: 'vamos juntos!', emoji em email formal,
+   'caro cliente', jargão de guru, 'alavancar', 'sinergia')"
 
-**Foco:**
-7. "O que está travando o crescimento agora — o gargalo real, não o ideal distante?"
-8. "Qual tarefa você repete toda semana e adoraria não precisar mais pensar nela?"
+**Sobre foco:**
+7. "Qual o gargalo do teu negócio hoje? O que tá segurando ele de crescer?"
+8. "Se eu pudesse tirar UMA coisa que você repete toda semana das tuas costas, qual seria?"
 
-**Identidade visual:**
-9. "Tem cores e fonte definidas? Se tiver, me passa. Se tiver os arquivos da fonte (não só o
-   nome), salva em `identidade/fontes/` e confirma aqui — sem arquivo, eu carrego a fonte via
-   Google Fonts pelo nome."
-10. "Tem arquivo de logo? Se tiver, salva em `identidade/logo.png` (ou `.svg`) e confirma aqui."
+**Sobre identidade visual:**
+9. "Tem identidade visual definida ou tá no zero? Se tem, me passa as cores principais e a fonte
+   — e se tiver os arquivos da fonte (não só o nome), salva em `identidade/fontes/` e confirma
+   aqui. Sem arquivo, eu carrego a fonte via Google Fonts pelo nome."
+10. "Tem logo? Se sim, joga o arquivo em `identidade/logo.png` (ou `.svg`) e me confirma."
 
-## Passo 3 — Preencher os arquivos
+## Fase 3 — Preenchimento dos arquivos
 
-- **`_memoria/empresa.md`** — respostas 1-4, mais o perfil escolhido no Passo 1.
-- **`_memoria/preferencias.md`** — "Exemplo de referência" recebe o texto colado na pergunta 5
-  literalmente; "Tom de voz" é sua leitura de 2-3 frases sobre o padrão desse texto; "O que
-  evitar" vem da resposta 6.
-- **`_memoria/estrategia.md`** — "Gargalo principal" da resposta 7; a resposta 8 vira candidata
-  a virar skill via `/mapear-rotinas` (anotar isso explicitamente no arquivo); "Prioridade das
-  próximas semanas" derivada do gargalo.
-- **`identidade/identidade.md`** — preencher com respostas 9-10, incluindo o campo "Arquivos" da
-  Tipografia se o usuário mandou arquivos de fonte. Se não houver nada definido,
-  deixar em branco e avisar que as skills visuais usam um padrão neutro até isso ser preenchido.
-  Se o usuário quiser um ponto de partida, apontar pra `templates/identidade/exemplos/` (exemplos
-  ilustrativos, não pra copiar os valores, só o nível de detalhe esperado).
+**`_memoria/empresa.md`** — respostas 1-4, mais o perfil escolhido na Fase 1. Formato simples:
+nome, o que faz, perfil de cliente, equipe.
 
-## Passo 4 — Adaptar o CLAUDE.md
+**`_memoria/preferencias.md`**
+- "Exemplo de referência" recebe o texto colado na resposta 5, literalmente.
+- "Tom de voz" é sua leitura em 2-3 frases do padrão desse texto.
+- "O que evitar" vem direto da resposta 6.
 
-Ler o molde correspondente ao perfil do Passo 1 em `templates/perfis/<perfil>.md`. Usar a seção
-"Pastas específicas desse perfil" de lá pra montar a estrutura de pastas, e "O que descrever"
-como guia do que incluir sobre o negócio. Editar a seção "Sobre este negócio" do `CLAUDE.md` raiz
-com isso (não reescrever o arquivo inteiro, só essa seção) — nome, o que o negócio faz, e a
-estrutura de pastas relevante. Se o perfil envolver clientes, mencionar explicitamente que
-`clientes/<nome>/` isola cada um (memória e identidade próprias, nunca misturadas).
+**`_memoria/estrategia.md`**
+- "Gargalo principal" da resposta 7.
+- A resposta 8 vira candidata a virar skill via `/mapear-rotinas` — anotar isso explicitamente
+  no arquivo.
+- "Prioridade das próximas semanas" derivada do gargalo (o que ataca ele direto).
 
-## Passo 5 — Resumo
+**`identidade/identidade.md`** — se o usuário deu cores/fonte/logo (respostas 9-10), preencher os
+campos correspondentes, incluindo "Arquivos" da Tipografia se ele mandou arquivo de fonte. Se
+não, deixar em branco e avisar:
+
+> "Deixei o `identidade/identidade.md` em branco. Sempre que definir a identidade visual, edita
+> lá — as skills visuais (`/carrossel`, `/frontend-design`, etc.) leem esse arquivo antes de criar
+> qualquer coisa."
+
+Se o usuário quiser um ponto de partida, apontar pra `templates/identidade/exemplos/` (exemplos
+ilustrativos, não pra copiar os valores, só o nível de detalhe esperado).
+
+**`CLAUDE.md`** — ler o molde correspondente ao perfil da Fase 1 em `templates/perfis/<perfil>.md`.
+Usar "Pastas específicas desse perfil" pra montar a estrutura de pastas, e "O que descrever" como
+guia do que incluir sobre o negócio. **Editar só a seção "Sobre este negócio" do `CLAUDE.md` raiz
+— nunca sobrescrever o arquivo inteiro.** O resto do arquivo (Fluxo de trabalho, Aprender com
+correções, Manter a memória em dia, Criação de skills) são regras universais do NimbusOS, válidas
+em qualquer instalação, não específicas desse negócio. Se o perfil envolver clientes, mencionar
+que `clientes/<nome>/` isola cada um (memória e identidade próprias, nunca misturadas).
+
+## Fase 4 — Resumo
 
 ```
-✓ Perfil: [perfil escolhido]
-✓ Negócio: _memoria/empresa.md
-✓ Voz e tom: _memoria/preferencias.md
+✓ Perfil aplicado: [perfil]
+✓ Contexto do negócio: _memoria/empresa.md
+✓ Tom de voz: _memoria/preferencias.md
 ✓ Foco atual: _memoria/estrategia.md
-✓ Identidade: identidade/identidade.md  [preenchida | em branco — completar quando definir a marca]
-✓ CLAUDE.md atualizado
+✓ Identidade: identidade/identidade.md  [preenchida | em branco — completar depois]
+✓ CLAUDE.md adaptado pro perfil [perfil]
 ```
 
-## Passo 6 — Próximos passos
+## Fase 5 — Renomear a pasta (se necessário)
 
-> "Pronto — o sistema já sabe quem vocês são. A partir de agora, roda `/abrir` no começo de cada
-> sessão pra eu carregar esse contexto antes da primeira frase.
+Se o nome da pasta atual for genérico (detectado em "Antes de começar"), gerar um slug do nome do
+negócio (resposta 1): minúsculas, sem acento, espaço vira hífen, caractere especial fora. Ex:
+"Padaria do Zé" → `padaria-do-ze`.
+
+Mostrar:
+
+> "Última coisa: a pasta ainda tá com nome genérico ('[nome atual]'). Pra ter cara do seu
+> negócio, recomendo renomear pra '[slug]'.
 >
-> Você mencionou que repete '[resposta da pergunta 8]' toda semana — quando quiser tirar isso da
-> sua rotina de vez, roda `/mapear-rotinas` que eu transformo isso numa skill própria."
+> Como fazer: fecha o VS Code, renomeia a pasta no Explorer (Windows) ou Finder (Mac) — ou no
+> terminal, fora dela: `mv <nome-atual> <slug>` — e abre o VS Code de novo na pasta renomeada.
+>
+> Se preferir outro nome, me fala que eu ajusto a sugestão."
+
+Se a pasta já tem nome próprio (não genérico), pular essa fase sem mencionar.
+
+## Fase 6 — Próximos passos
+
+> "Pronto — o sistema já sabe quem vocês são. No começo de cada sessão, roda `/abrir` que eu
+> carrego tudo isso antes da primeira frase. Quando quiser fazer um carrossel, plano de SEO,
+> campanha ou qualquer outra coisa, é só chamar a skill que cabe.
+>
+> Você mencionou que repete '[resposta da pergunta 8]' toda semana — quando quiser tirar isso das
+> costas de vez, roda `/mapear-rotinas` que eu transformo isso numa skill própria."
 
 Se o usuário perguntar sobre backup/versionamento, mencionar `/salvar`.
 
@@ -112,6 +144,8 @@ Se o usuário perguntar sobre backup/versionamento, mencionar `/salvar`.
 - Nunca inventar dado que não foi dado — registrar exatamente o que veio, mesmo que incompleto.
 - Nunca escrever "preenchido pelo /instalar" nos arquivos finais depois de preenchidos de verdade
   — esse aviso é só do template em branco.
-- A instalação inteira deve durar poucos minutos. Se o usuário estiver com pressa numa pergunta,
-  registrar o que tiver e seguir — não insistir.
+- Nunca sobrescrever o `CLAUDE.md` inteiro — editar só a seção "Sobre este negócio", o resto é
+  regra universal do sistema.
+- A instalação inteira deve durar 5-7 minutos no máximo. Se o usuário estiver enrolando numa
+  pergunta, registrar o que tem e seguir — não insistir.
 - Não fazer perguntas fora das listadas sem motivo concreto.
