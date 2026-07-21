@@ -16,6 +16,23 @@ primeiro. 5-7 minutos, não mais que isso.
 
 ## Antes de começar
 
+Primeiro, perguntar de quem é o negócio sendo configurado:
+
+> "Essa instalação é pro seu próprio negócio, ou você tá configurando isso por conta de um
+> cliente que você atende?"
+
+- **Pro negócio dele mesmo:** seguir normal — as perguntas da Fase 2 são sobre quem está
+  respondendo.
+- **Por conta de um cliente:** avisar "A partir daqui, as perguntas são sobre o negócio do seu
+  cliente, não o seu — responde como se estivesse descrevendo ele." Em seguida perguntar: "Você
+  já tem os dados confirmados com esse cliente (reunião feita, briefing, etc.), ou é uma versão
+  especulativa pra prospecção — tipo um site de demonstração antes de fechar?"
+  - **Dados confirmados:** seguir a Fase 2 normal, descrevendo o cliente.
+  - **Especulativo/prospecção (sem reunião ainda):** avisar que as respostas vão ficar marcadas
+    nos arquivos como suposição (`[suposição — confirmar com o cliente]`), pra não virar dado
+    real por engano depois. Seguir a Fase 2 preenchendo com a melhor estimativa disponível — não
+    travar a instalação por falta de dado confirmado.
+
 Ler `_memoria/empresa.md`. Se já tiver conteúdo real (não é o template em branco), perguntar:
 
 > "Já existe uma configuração aqui. Quer refazer do zero ou só completar o que falta?"
@@ -42,27 +59,37 @@ A resposta determina qual molde usar na Fase 3: `templates/perfis/solopreneur.md
 Fazer essas perguntas em ordem, esperando a resposta de cada uma antes de seguir. Se vier resposta
 vaga, repetir uma vez pedindo concretude — não insistir mais que isso, registrar o que vier.
 
+Se a instalação for por conta de um cliente ("Antes de começar"), todas as perguntas abaixo são
+sobre o negócio dele — trocar "você"/"seu negócio" por "o negócio do seu cliente" na hora de
+perguntar. Se for a versão especulativa (sem dados confirmados), aceitar a estimativa do usuário
+e marcar cada resposta preenchida assim nos arquivos com o sufixo `[suposição — confirmar depois]`.
+
+Perguntas marcadas **(opcional)** podem ser puladas — se o usuário disser "pula", "não tenho" ou
+responder vazio, seguir direto pra próxima, sem repetir pedindo concretude.
+
 **Sobre o negócio:**
 1. "Como você chama o que você faz? (nome do negócio, ou seu nome se for marca pessoal)"
 2. "O que você entrega, em uma frase do jeito que você falaria pro vizinho?"
 3. "Quem te paga? (perfil de cliente real — descreve em uma ou duas frases, sem persona genérica)"
 4. "Você toca sozinho ou tem equipe? Se tem, quantos e cada um fazendo o quê?"
 
-**Sobre voz:**
+**Sobre voz (opcional):**
 5. "Me cola um exemplo da tua escrita — uma legenda do Insta, um email pra cliente, qualquer
-   coisa real e recente. Assim eu calibro o jeito de escrever sem precisar adivinhar."
+   coisa real e recente. Assim eu calibro o jeito de escrever sem precisar adivinhar. (Opcional —
+   se não tiver à mão, pula que eu sigo sem isso.)"
 6. "O que te dá ranço quando alguém escreve assim? (ex: 'vamos juntos!', emoji em email formal,
-   'caro cliente', jargão de guru, 'alavancar', 'sinergia')"
+   'caro cliente', jargão de guru, 'alavancar', 'sinergia') (Opcional.)"
 
 **Sobre foco:**
 7. "Qual o gargalo do teu negócio hoje? O que tá segurando ele de crescer?"
-8. "Se eu pudesse tirar UMA coisa que você repete toda semana das tuas costas, qual seria?"
+8. "Se eu pudesse tirar UMA coisa que você repete toda semana das tuas costas, qual seria?
+   (Opcional — se não tiver uma na ponta da língua, pula.)"
 
 **Sobre identidade visual:**
-9. "Tem identidade visual definida ou tá no zero? Se tem, me passa as cores principais e a fonte
-   — e se tiver os arquivos da fonte (não só o nome), salva em `identidade/fontes/` e confirma
-   aqui. Sem arquivo, eu carrego a fonte via Google Fonts pelo nome."
-10. "Tem logo? Se sim, joga o arquivo em `identidade/logo.png` (ou `.svg`) e me confirma."
+9. "Tem identidade visual definida — cores, fonte, logo — ou tá tudo no zero? Se tiver, me passa
+   as cores principais e a fonte (arquivo da fonte também, se tiver — salva em
+   `identidade/fontes/`), e o arquivo do logo (`identidade/logo.png` ou `.svg`). Sem arquivo de
+   fonte, eu carrego via Google Fonts pelo nome."
 
 ## Fase 3 — Preenchimento dos arquivos
 
@@ -70,17 +97,19 @@ vaga, repetir uma vez pedindo concretude — não insistir mais que isso, regist
 nome, o que faz, perfil de cliente, equipe.
 
 **`_memoria/preferencias.md`**
-- "Exemplo de referência" recebe o texto colado na resposta 5, literalmente.
-- "Tom de voz" é sua leitura em 2-3 frases do padrão desse texto.
-- "O que evitar" vem direto da resposta 6.
+- "Exemplo de referência" recebe o texto colado na resposta 5, literalmente. Se pulou, deixar em
+  branco.
+- "Tom de voz" é sua leitura em 2-3 frases do padrão desse texto. Se não tiver exemplo, deixar em
+  branco — não inventar um tom.
+- "O que evitar" vem direto da resposta 6, se respondida.
 
 **`_memoria/estrategia.md`**
 - "Gargalo principal" da resposta 7.
-- A resposta 8 vira candidata a virar skill via `/mapear-rotinas` — anotar isso explicitamente
-  no arquivo.
+- Se a resposta 8 vier, ela vira candidata a virar skill via `/mapear-rotinas` — anotar isso
+  explicitamente no arquivo. Se pulou, não preencher essa parte.
 - "Prioridade das próximas semanas" derivada do gargalo (o que ataca ele direto).
 
-**`identidade/identidade.md`** — se o usuário deu cores/fonte/logo (respostas 9-10), preencher os
+**`identidade/identidade.md`** — se o usuário deu cores/fonte/logo (resposta 9), preencher os
 campos correspondentes, incluindo "Arquivos" da Tipografia se ele mandou arquivo de fonte. Se
 não, deixar em branco e avisar:
 
@@ -132,9 +161,11 @@ Se a pasta já tem nome próprio (não genérico), pular essa fase sem mencionar
 
 > "Pronto — o sistema já sabe quem vocês são. No começo de cada sessão, roda `/abrir` que eu
 > carrego tudo isso antes da primeira frase. Quando quiser fazer um carrossel, plano de SEO,
-> campanha ou qualquer outra coisa, é só chamar a skill que cabe.
->
-> Você mencionou que repete '[resposta da pergunta 8]' toda semana — quando quiser tirar isso das
+> campanha ou qualquer outra coisa, é só chamar a skill que cabe."
+
+Se a pergunta 8 foi respondida (não pulada), completar antes de fechar:
+
+> "Você mencionou que repete '[resposta da pergunta 8]' toda semana — quando quiser tirar isso das
 > costas de vez, roda `/mapear-rotinas` que eu transformo isso numa skill própria."
 
 Se o usuário perguntar sobre backup/versionamento, mencionar `/salvar`.
@@ -142,6 +173,8 @@ Se o usuário perguntar sobre backup/versionamento, mencionar `/salvar`.
 ## Regras
 
 - Nunca inventar dado que não foi dado — registrar exatamente o que veio, mesmo que incompleto.
+  Exceção: instalação especulativa de prospecção ("Antes de começar") pode registrar a estimativa
+  do próprio usuário, mas sempre marcada como suposição — nunca como dado confirmado.
 - Nunca escrever "preenchido pelo /instalar" nos arquivos finais depois de preenchidos de verdade
   — esse aviso é só do template em branco.
 - Nunca sobrescrever o `CLAUDE.md` inteiro — editar só a seção "Sobre este negócio", o resto é
